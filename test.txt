@@ -1,0 +1,5 @@
+./test_nndescent ../../source/siftsmall/siftsmall_base.fvecs ../../source/graph/siftsmall_base.graph 20 20 10 10 10
+./test_faiss_graph ../../source/siftsmall/siftsmall_base.fvecs IVF135,Flat nprobe=64 20 ../../source/graph/siftsmall_base_faiss.graph
+./test_nndescent_refine ../../source/siftsmall/siftsmall_base.fvecs ../../source/graph/siftsmall_base_faiss.graph ../../source/graph/siftsmall_base_faiss_nndescent.graph 20 20 10 10 10
+./test_nsg_index ../../../source/siftsmall/siftsmall_base.fvecs ../../../source/graph/siftsmall_base_faiss_nndescent.graph 20 20 20 ../../../source/nsg/siftsmall_base_faiss_nndescent.nsg
+./test_nsg_search ../../../source/siftsmall/siftsmall_base.fvecs ../../../source/siftsmall/siftsmall_query.fvecs ../../../source/nsg/siftsmall_base_faiss_nndescent.nsg 20 20 ../../../source/result/siftsmall_base_result.ivecs
